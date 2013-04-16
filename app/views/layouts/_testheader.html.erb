@@ -1,0 +1,69 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%#= link_to "SHOP_NAME", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-left">
+          <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Компания <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "О компании", '#' %></li>
+                <li><%= link_to "Контакты", '#' %></li>
+                <li><%= link_to "Доставка", '#' %></li>
+             <!--   <li><%= link_to "Акции", '#' %></li>
+                <li><%= link_to "Скидки", '#' %></li> -->
+                <li><%= link_to "Таблица размеров", '#' %></li>
+              </ul>
+            </li>
+
+          <% if signed_in? %>
+          <li><%= link_to current_user.email, '#' %></li>
+          <% else %>
+          <li><%= link_to 'Гость', '#' %></li>
+          <% end %>
+          <li><%= link_to "Заказы", '#' %></li>
+          <li><%= link_to "Товары", items_path %></li> <!-- help_path -->
+          <% if signed_in? %>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Пользователи <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Клиенты", '#' %></li>
+                <li><%= link_to "Сотрудники", '#' %></li>
+              </ul>
+            </li>
+
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Аккаунт <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Мой профиль", current_user %></li>
+                <li><%= link_to "Настройки", edit_user_path(current_user) %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Выйти", signout_path, method: "delete" %>
+                </li>
+              </ul>
+            </li>
+             <li>
+                  <%= link_to "Выйти", signout_path, method: "delete" %>
+                </li>
+          <% else %>
+            <li><%= link_to "Войти", signin_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- <div>
+  <ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Library</a> <span class="divider">/</span></li>
+    <li class="active">Data</li> 
+  </ul>
+</div>-->
+</header>

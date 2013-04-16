@@ -1,12 +1,23 @@
 Shop::Application.routes.draw do
+  get "store/index"
+
+  resources :items
+
+
   resources :users
-  root to: "static_pages#home"
+  
   resources :sessions, only: [:new, :create, :destroy]
+  resources :test, only: [:index]
 
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   
+
+  #root to: "static_pages#home"
+  root to: "store#index", as: 'store'
+ # get 'test#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

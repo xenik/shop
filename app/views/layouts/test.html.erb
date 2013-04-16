@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Shop</title>
+  <title>1</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %>  
+    <%#= render 'layouts/shim' %>  
 </head>
 <body>
   <%= render 'layouts/testheader' %>
@@ -13,10 +13,11 @@
     <% flash.each do |key, value| %>
         <%= content_tag(:div, value, class: "alert alert-#{key}") %>
     <% end %>
+
     <%= yield %>
     <%= render 'layouts/testfooter' %>
   </div>
   <%= debug(params) if Rails.env.development? %>
-  <%= params.inspect if Rails.env.development? %>  
+  <%#= params.inspect if Rails.env.development? %>  
   </body>
 </html>

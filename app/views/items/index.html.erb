@@ -1,0 +1,63 @@
+<h1>Listing items</h1>
+<!--
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Image url</th>
+    <th>Price</th>
+    <th>Article</th>
+    <th>Weight</th>
+    <th>Width</th>
+    <th>Length</th>
+    <th>Height</th>
+    <th>Volume</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @items.each do |item| %>
+  <tr>
+    <td><%= item.title %></td>
+    <td><%= item.description %></td>
+    <td><%= item.image_url %></td>
+    <td><%= item.price %></td>
+    <td><%= item.article %></td>
+    <td><%= item.weight %></td>
+    <td><%= item.width %></td>
+    <td><%= item.length %></td>
+    <td><%= item.height %></td>
+    <td><%= item.volume %></td>
+    <td><%= link_to 'Show', item %></td>
+    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+-->
+<table>
+  <% @items.each do |i| %>
+    <tr class="<%= cycle('list_line_odd','list_line_even') %>">
+      <td>
+        <%= image_tag(i.image_url,class: 'list_image') %>
+      </td>
+
+      <td class="list_descriprion">
+        <dl>
+          <dt><%= i.title %></dt>
+          <dd><%= truncate(strip_tags(i.description),length: 80) %></dd>
+        </dl>
+      </td>
+
+      <td class="list_actions">
+        <%= link_to 's', i %>
+        <%= link_to 'e', edit_item_path(i) %>
+        <%= link_to 'x', i, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </td>   
+  <% end %>
+</table>
+<br />
+
+<%= link_to 'New Item', new_item_path %>
