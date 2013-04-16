@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+  layout 'admin'
   def new
   end
 
@@ -16,6 +16,6 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    redirect_to root_url
+    redirect_to store_path
   end
 end

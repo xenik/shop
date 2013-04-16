@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  #layout 'items'
+  layout 'admin'
   # GET /items
   # GET /items.json
   def index
