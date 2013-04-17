@@ -1,5 +1,22 @@
 /*@import 'reset';*/
 
+/*
+pink
+#ffb8ff
+#ffbae0
+
+#fc9fbc
+
+green
+#ccff8f
+#adff69
+
+#7cc22c
+*/
+
+$mainPink: #ffb8ff;
+$mainGreen: #ccff8f;
+
 body {
 
 }
@@ -13,7 +30,7 @@ body {
 hgroup {
 
 display: inline-block;
-background: #7cc22c;
+background: $mainGreen;
 width: 770px;
 height: 160px;
 border-radius: 25px;
@@ -33,7 +50,7 @@ margin: 30px 10px 10px 20px;
 
 header section {
 display: inline-block;
-background: #fc9fbc;
+background: $mainPink;
 float: right;
 width: 195px;
 /*min-height: 100%;*/
@@ -52,7 +69,7 @@ nav {
 width:100%;
 height:55px;
 /* background:#2ca9e4;*/
-background: #fc9fbc;
+background: $mainPink;
 border-radius: 25px;
 -webkit-border-radius: 25px;
 margin-bottom: 15px;
@@ -123,20 +140,20 @@ border-radius: 25px;
 .sideBarL {
   margin-bottom: 15px; 
   width: 195px;
-  background-color: #fc9fbc;
+  background-color: $mainPink;
   float: left;
 }
 
 .sideBarR {
   margin-bottom: 15px;
   width: 195px;
-  background-color: #fc9fbc;
+  background-color: $mainPink;
   float: right;
 }
 
 .content {
   width: 550px;
-  background-color: #7cc22c;
+  background-color: $mainGreen;
   margin: 0 auto 15px auto;
 }
 
@@ -157,7 +174,7 @@ height:55px;
 margin-top: 15px;
 /*margin:20px 0 0 0;*/
 /* border-top:1px solid #bbb*/
-background: #fc9fbc;
+background: $mainPink;
 width:100%;
 
 border-radius: 25px;
