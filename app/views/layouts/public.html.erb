@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Int's site<%= "| #{@page_title}" if @page_title %></title>
-    <%= stylesheet_link_tag('public') %>
+    <%= stylesheet_link_tag 'reset', 'public', 'store' %>
   </head>
   <body>
-    <div class="content">
+    <div class="container">
       <header>
         <hgroup>
           <img src="#"  />
@@ -30,19 +30,14 @@
           <li><a href="#">Как оформить заказ</a></li>
         </ul>
       </nav>
-<!--
-      <div class="subMenu">
-        <section class="subMenu1">Найти...</section>
-        <section class="subMenu2">Добро пожаловать</section>
-        <section class="subMenu3">Наш клуб</section>
-      </div>
--->
-      <!--<div class="main">-->
-        <div class="main1">Категории:</div>
-        <div class="main2">Страница товара:</div>
-        <div class="main3">Акции:</div>
-      <!-- </div> -->
 
+      <div class="main">    
+        <div class="sideBarL">Категории:</div>
+        <div class="sideBarR">Акции:</div>
+        <div class="content">Страница товара:<%= yield %></div>
+      </div>  
+
+      <div class="clear"></div>
 
       <footer>
         <section class="footer1"><a href="#">Инфо</a></section>
