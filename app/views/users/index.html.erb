@@ -1,6 +1,7 @@
 <% provide(:title, 'All users') %>
 <h1>Все пользователи</h1>
 <% if notice %>
+<p id="notice"><%= notice %></p>
 <% end %>
 
 <ul class="users">
@@ -8,9 +9,13 @@
     <li>
       <%#= gravatar_for user, size: 52 %>
       <%= link_to user.name, user %>
+      <%= user.email %>
+      <%= user.admin %>
       <% if current_user.admin? && !current_user?(user) %>
-    | 	<%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
+    | 	<%= link_to "Удалить", user, method: :delete, data: { confirm: "Вы уверены?" } %>
   	  <% end %>
     </li>
   <% end %>
+	<hr>
+  <%= link_to "Создать нового пользователя", new_user_path %>
 </ul>

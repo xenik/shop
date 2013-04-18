@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+ before_filter :signed_in_user #, only: [:index, :edit, :update, :destroy]  
   layout 'admin'
   # GET /items
   # GET /items.json

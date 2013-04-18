@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_filter :signed_in_user, only: [:index, :edit, :update, :destroy]
   layout 'public'
   # GET /orders
   # GET /orders.json

@@ -16,4 +16,11 @@ class ApplicationController < ActionController::Base
   		session[:cart_id] = cart.id
   		cart
   	end
+
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "Please sign in."
+      end
+    end    
 end

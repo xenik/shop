@@ -1,5 +1,8 @@
 <% provide(:title, @user.name) %>
 <div class="row">
+
+	<p>Добро пожаловать!</p>
+	<p>Сейчас: <%= Time.now %></p>
   <aside class="span4">
     <section>
       <h1>
@@ -8,4 +11,9 @@
       </h1>
     </section>
   </aside>
+  <% if current_user.admin?  %>
+  	<p>У вас имеется <%= pluralize(@total_orders,"order") %>.</p>
+
+  <% end %>
+
 </div>
