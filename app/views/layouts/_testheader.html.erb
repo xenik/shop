@@ -23,7 +23,7 @@
           <% else %>
           <li><%= link_to 'Гость', '#' %></li>
           <% end %>
-          <li><%= link_to "Заказы", '#' %></li>
+          <li><%= link_to "Заказы", orders_path %></li>
           <li><%= link_to "Товары", items_path %></li> <!-- help_path -->
           <% if signed_in? %>
             <li id="fat-menu" class="dropdown">
@@ -31,8 +31,8 @@
                 Пользователи <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Клиенты", '#' %></li>
-                <li><%= link_to "Сотрудники", '#' %></li>
+                <li><%= link_to "Клиенты", users_path %></li>
+                <li><%= link_to "Сотрудники", users_path %></li>
               </ul>
             </li>
 

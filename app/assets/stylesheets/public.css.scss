@@ -10,6 +10,7 @@ pink
 green
 #ccff8f
 #adff69
+#c2ffd6
 
 #7cc22c
 */
@@ -237,3 +238,36 @@ a:hover {}
 #content h2 { color: #4C2516; }
 */
 
+/* shop_form */
+
+.shop_form {
+  fieldset {
+    background-color: #efe;
+  }
+  legend {
+    color: #dfd;
+    background-color: #141;
+    font-family: sans-serif;
+    padding: 0.2em 1em;
+  }
+
+  form {
+    label {
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
+    .submit {
+      margin-left: 4em;
+    }
+    br {
+      display: none;
+    }
+  }
+}

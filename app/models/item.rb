@@ -8,7 +8,8 @@ class Item < ActiveRecord::Base
   					with: %r{\.(gif|jpg|png)$}i,
   					message: "URL must have GIF,JPG or PNG."}
 
-	has_many :line_items  					
+	has_many :line_items  
+	has_many :orders, through: :line_items					
 
 	before_destroy :ensure_not_referenced_by_any_line_item
 
