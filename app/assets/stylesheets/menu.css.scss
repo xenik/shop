@@ -1,0 +1,155 @@
+.divmenu {
+  background-color: #7DC12C;
+  padding: 5px;
+  border-radius: 25px;
+  padding-bottom: 15px;
+}
+
+#nav {
+/*    border:3px solid #3e4547;
+    box-shadow:2px 2px 8px #000000;
+    border-radius:3px; 
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;*/
+
+}
+
+#nav li a.katalog:hover {
+  color: #fff;
+  background-color: #FC9FBC;
+}
+
+#nav, #nav ul {
+    list-style:none;
+    padding:0;
+   /* width:169px;*/
+
+}
+
+#nav ul {
+    position:relative;
+    z-index:-1;
+}
+
+#nav li {
+    position:relative;
+    z-index:100; 
+}
+
+#nav ul li {
+    margin-top:-23px;
+
+    /*-moz-transition:  0.4s linear 0.4s;
+    -ms-transition: 0.4s linear 0.4s;
+    -o-transition: 0.4s linear 0.4s;
+    -webkit-transition: 0.4s linear 0.4s;
+    transition: 0.4s linear 0.4s;*/
+}
+
+
+#nav li a {
+    background-color:#7DC12C; /*#FC9FBC; */
+    color:#000;
+    display:block;
+    font-size:12px;
+    font-weight:bold;
+    line-height:28px;
+    outline:0;
+    padding-left:15px;
+    text-decoration:none;  
+    border-radius: 25px;
+}
+
+#nav li a.sub {
+    background:#FFF image_url("menu/down.gif") no-repeat;
+   /* border-top: 1px solid #FFF*/
+}
+#nav li a.sub:hover {
+  background-color: #FC9FBC;
+  color: #FFF;
+}
+
+#nav li a + img {
+    cursor:pointer;
+    display:none;
+    height:28px;
+    left:0;
+    position:absolute;
+    top:0;
+    width:175px;
+}
+/*
+#nav li a img {
+    border-width:0px;
+    height:24px;
+    line-height:28px;
+    margin-right:8px;
+    vertical-align:middle;
+    width:24px;
+}
+*/
+#nav li a:hover {
+    background-color: #7DC12C; 
+}
+
+
+#nav ul li a {
+    background-color:#7DC12C;
+    border-bottom:1px solid #FC9FBC; /*#FFF;*/
+    color:#000;
+    font-size:11px;
+    line-height:22px;
+}
+
+
+#nav ul li a:hover {
+    background-color:#FC9FBC;
+    color:#FFF;
+}
+/*
+#nav ul li a img {
+    background: url("img/menu/bulb.png") no-repeat;
+    border-width:0px;
+    height:16px;
+    line-height:22px;
+    margin-right:5px;
+    vertical-align:middle;
+    width:16px;
+}
+
+#nav ul li:nth-child(odd) a img {
+    background:url("img/menu/bulb2.png") no-repeat;
+}
+*/
+#nav a.sub:focus {
+    background:white;
+    outline:0;
+}
+
+#nav a:focus ~ ul li {
+    margin-top:0;
+/*
+    -moz-transition:  0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linears;
+    -webkit-transition: 0.4s linears;
+    transition: 0.4s linear;
+*/
+}
+
+#nav a:focus + img, #nav a:active + img {
+    display:block;
+}
+
+#nav a.sub:active {
+    background:white;
+    outline:0;
+}
+
+#nav a:active ~ ul li {
+    margin-top:0;
+}
+#nav ul:hover li {
+    margin-top:0;
+}
+

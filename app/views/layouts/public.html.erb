@@ -1,69 +1,197 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
-  <head>
-    <meta charset="utf-8">
-    <title>Int's site<%= "| #{@page_title}" if @page_title %></title>
-    <%= stylesheet_link_tag 'reset', 'public', 'store', 'carts' %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>    
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <hgroup>
-          <img src="#"  />
-          <h1>Наш телефон: ххх-хх-хх</h1>
-          <a href="#">Заказать обратный звонок</a>
-          <h1>ICQ: XXX-XXX-XXX</h1>
-        </hgroup>
-        <section>
-          <h1>Корзина:</h1>
-          <img src="#" />
-        </section>
-      </header>
-      <nav>
-        <ul>
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Акции</a></li>
-          <li><a href="#">Комплекты одежды</a></li>
-          <li><a href="#">Оплата</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Как оформить заказ</a></li>
-        </ul>
-      </nav>
+<head>
+<title>int</title>
+<meta charset="UTF-8">
+<!-- <link rel="stylesheet" type="text/css" href="int.css.scss">
+<link rel="stylesheet" type="text/css" href="item.css.scss">
+<link rel="stylesheet" type="text/css" href="menu.css.scss"> -->
 
-      <div class="main">    
-        <div class="sideBarL">Категории:</div>
-        <div class="sideBarR">Акции:</div>
-        <div class="content">Страница товара:<%= yield %></div>
-      </div>  
+<!-- <script src="jquery-1.5.min.js" type="text/javascript"></script>
+<script src="equalHeight.js" type="text/javascript"></script> -->
+<!-- , 'public', 'store', 'carts' -->
+  <%= stylesheet_link_tag 'reset', 'int', 'menu', 'item'%>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>    
+</head>
+<body>
+  <!-- -->
+	<div class="site">
+		<div class="header">
+			<div class="info">
+				<div class="logo">       
 
-      <div class="clear"></div>
+					<a href="#"><%= image_tag "main.jpg" %></a>
+				</div>
+				<div class="contacts">
+			  	<div class="contactshelp">				
+						<h2>Наш телефон: (XXX)-ХХХ-ХХ-ХХ</h2><br/>
+						<h2><a href="#">Заказать обратный звонок</a></h2><br/>
+						<h2>ICQ: XXX-XXX-XXX</h2>
+					</div>	
+				</div>
+			</div>
+			<div class="cart">
+				<%= image_tag "cart2.jpg" %> 
+				<p><a href="#">8 тов. = 5600 руб</a></p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="nav">
+			<div class="uppernav">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Комплекты одежды</a></li>
+					<li><a href="#">Доставка</a></li>
+					<li><a href="#">Оплата</a></li>
+					<li><a href="#">Как оформить заказ</a></li>
+					<li><a href="#">О нас</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="menu">
+				<div class="divmenu">			
+				    <ul id="nav">
+				      <li><a href="#" class="katalog"><h3>Каталог</h3></a></li>
+				      <li><a href="#" class="sub" tabindex="1">Для девочек</a><%= image_tag "menu/up.gif"%>
+				        <ul>
+				          <li><a href="#">*Комплекты одежды</a></li>
+				          <li><a href="#">Платья</a></li>
+				          <li><a href="#">Юбки</a></li>
+				          <li><a href="#">Футболки, водолазки</a></li>
+				          <li><a href="#">Джемпера, жакеты</a></li>
+									<li><a href="#">Праздничные платья</a></li>
+									<li><a href="#">Шорты, бриджи</a></li>
+									<li><a href="#">Блузки, рубашки</a></li>
+									<li><a href="#">Джинсы, брюки</a></li>
+									<li><a href="#">Спортивные костюмы</a></li> 
+									<li><a href="#">Куртки, ветровки, плащи</a></li>
+									<li><a href="#">Гольфы, носки, чулки</a></li>
+									<li><a href="#">Колготки, леггинсы</a></li>
+									<li><a href="#">Пижамы, сорочки</a></li>
+									<li><a href="#">Нижнее белье</a></li>
+									<li><a href="#">купальники</a></li>
+									<li><a href="#">Шапки</a></li>
+									<li><a href="#">варежки, перчатки</a></li>
+									<li><a href="#">Халаты</a></li>                       
+				        </ul>
+					    </li>         
+					    <li><a href="#" class="sub" tabindex="2">Для мальчиков</a><%= image_tag "menu/up.gif"%>
+					      <ul>
+									<li><a href="#">*Комплекты одежды</a></li>
+									<li><a href="#">Футболки, водолазки</a></li>
+									<li><a href="#">Шорты, бриджи</a></li>
+									<li><a href="#">Брюки, джинсы</a></li>
+									<li><a href="#">Джемпера, толстовки</a></li>
+									<li><a href="#">Куртки, ветровки</a></li>
+									<li><a href="#">Рубашки</a></li>
+									<li><a href="#">Праздничные костюмы</a></li>
+									<li><a href="#">Спортивные костюмы</a></li>
+									<li><a href="#">Гольфы, носки, колготки</a></li>
+									<li><a href="#">Шапки, перчатки</a></li>
+									<li><a href="#">Пижамы, нижнее белье</a></li>
+									<li><a href="#">Халаты</a></li>
+					      </ul>
+					    </li>
+					    <li><a href="#" class="sub" tabindex="3">Для новорожденных</a><%= image_tag "menu/up.gif"%>
+						    <ul>
+						    	<li><a href="#">*Комплекты одежды</a></li>
+									<li><a href="#">Кофты, футболки</a></li>
+									<li><a href="#">Боди, песочники</a></li>
+									<li><a href="#">Ползунки, штанишки</a></li>
+									<li><a href="#">Куртки, комбинезоны</a></li>
+									<li><a href="#">Чепчики, шапочки</a></li>
+									<li><a href="#">Конверты прогулочные</a></li>
+									<li><a href="#">Носки, пинетки</a></li>
+									<li><a href="#">Комплекты на выписку</a></li>
+									<li><a href="#">Распашонки</a></li>
+									<li><a href="#">Белье, пеленки</a></li>
+									<li><a href="#">Праздничная одежда</a></li>
+						    </ul>
+					    </li>
+					</ul>
+				</div>	
+			</div>
+			<div class="other">
+				<h3>Комплекты одежды</h3>
+			</div>			
+			<div class="main">
+				<h2>Категория каталога</h2>
+				<div class="items">
+					<a href="#"><%= image_tag "rails.png"%></a>
+					<div class="item">
+						<h1><a href="#">Название товара</a></h1>
+						<h3>Описание товара в несколько символов. Вот такое описание в несколько сиволов</h3>
+						<p>Цена: <span>14.50</span></p>
+						<input type="button" value="В корзину"/>
+					</div>
+				</div>
 
-      <footer>
-        <section class="footer1"><a href="#">Инфо</a></section>
-        <section class="footer2"><a href="#">Контакты</a></section>
-        <section class="footer3"><a href="#">Карта сайта</a></section>
-        <section class="footer4"><a href="#">Помощь</a></section>
-        <section class="footer5"><a href="#">xenik</a></section>
-        <section class="footer5"><a href="/signin">Админка</a></section>
-      </footer>
-    </div>
-    <!--
-    <div id="header">
-      <h1>Simple CMS</h1>
-    </div>
-    <div id="main">
-      
-      <div id="content">
-        <%#= yield %>
-      </div>
-      <div class="clear"></div>
-    </div>
-    <div id="footer">
-      <p id="copyright">&copy; vk.com/xenik / Sergey Shibut</p>
-    </div>
-  -->
-  </body>
+				<div class="items">
+					<a href="#"><%= image_tag "rails.png" %></a>
+					<div class="item">
+						<h1><a href="#">Платье розовое с рюшечками</a></h1>
+						<h3>Описание товара в несколько символов... бла бла бла.. Платье розового цвета.</h3>
+						<p>Цена: <span>41.75</span></p>
+						<input type="button" value="В корзину"/>
+					</div>
+				</div>
+
+				<div class="items">
+					<a href="#"><%= image_tag "rails.png" %></a>
+					<div class="item">
+						<h1><a href="#">Кусочек сыра</a></h1>
+						<h3>Описание товара в несколько символов.. на сырное тарелке специально для вас.</h3>
+						<p>Цена: <span>244.00</span></p>
+						<input type="button" value="В корзину"/>
+					</div>
+				</div>
+
+				<div class="items">
+					<a href="#"><%= image_tag "rails.png" %></a>
+					<div class="item">
+						<h1><a href="#">Бантики на девочку</a></h1>
+						<h3>Описание товара в несколько символов.. на сырное тарелке специально для вас.</h3>
+						<p>Цена: <span>350.00</span></p>
+						<input type="button" value="В корзину"/>
+					</div>
+				</div>				
+
+				<div class="items">
+					<a href="#"><%= image_tag "rails.png" %></a>
+					<div class="item">
+						<h1><a href="#">Летающий вертолет</a></h1>
+						<h3>Описание товара в несколько символов.. на сырное тарелке специально для вас.</h3>
+						<p>Цена: <span>1350.00</span></p>
+						<input type="button" value="В корзину"/>
+					</div>
+				</div>	
+
+			</div>
+		</div>		
+		<div class="clear"></div>
+		<div class="footer">
+			<div class="upperfooter">
+				<ul>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Карта сайта</a></li>
+					<li><a href="#">Напишите нам</a></li>
+					<li><a href="#">xenik</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
+<!--
+
+2) место для логотипа идет по размеру как колонка для категорий
+4) фото товара должно быть побольше,цена крупнее, кнопка в корзину справа внизу
+
+
+10) когда нажимаешь посмотреть заказ-выдаются только данные о человеке без самого товара
+12) можно ли еще админку как-то связать с печатью каких-то первичных документов ?
+13) товара нет в наличии 
+14) первичного листа с заказом чтобы менеджер смог собрать товар
+-->

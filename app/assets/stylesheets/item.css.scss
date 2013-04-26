@@ -1,0 +1,80 @@
+﻿/* item */
+
+.main > h2 {
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 1px solid gray;
+	margin-bottom: 15px;
+}
+
+.main  img {
+	float: left;
+	width: 116px;
+	height: 125px;
+	border: 2px solid #FC9FBC;
+	border-radius: 25px;
+}
+
+.items {
+	border-bottom: 1px solid gray;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+
+.item {
+	margin-left: 140px;
+}
+
+.item h1 {
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.item h1 a {
+	text-decoration: none;
+}
+
+.item h1 a:hover {
+    color: #ffe; /* Цвет текста активного пункта */
+    background-color: #7DC12C;  /* Цвет фона активного пункта */
+    border-radius: 25px;
+    border: 1px solid #FC9FBC;
+    font-size: 21px;
+}
+
+.item h3 {
+	font-size: 18px;
+	font-weight: 300;
+	margin: 10px 0 40px 0;
+}
+
+.item p {
+	display: inline;
+}
+.item p span {
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+input {
+	float: right;
+	margin-left: 155px;
+	margin-top: 0;
+	margin-right: 10px;
+	margin-top: 0;
+	border-radius: 25px;
+	border: 2px solid #FC9FBC;
+	background-color: #7DC12C;
+	cursor:pointer;
+	font-size: 18px;
+/*	font-weight: bold;*/
+	width: 100px;
+}
+
+input:hover {
+	border: 2px solid #7DC12C;
+	background-color: #FC9FBC;
+	color: #fff;
+}

@@ -1,0 +1,223 @@
+﻿/*@import "reset.css";*/
+/*
+green: #7DC12C;
+pink: #FC9FBC;
+*/
+body {
+	background-color: white;
+}
+
+.site {
+	width: 980px;
+	/*padding: 10px;
+	outline: 1px solid #ccc;*/
+	margin: 0 auto;
+	background-color: white;
+}
+
+/* HEADER */
+.header {
+	margin-bottom: 15px;
+	height: 160px;
+}
+
+
+.info {
+	background-color: #7DC12C;
+	width: 750px;
+	float: left;
+	height: 140px;
+	border-radius: 25px;
+	padding: 10px;	
+}
+
+.logo {
+	/*background-color: black;*/
+	height: 100%;
+	width: 400px;
+	float: left;
+}
+
+.logo img {
+	width: 338px;
+	height: 138px;
+	border-radius: 25px;
+	border: 1px solid  #F7F2EE;
+}
+
+.contacts {
+	height: 100%;
+	width: 340px;
+	float: right;	
+}
+
+.contactshelp {
+	height: 100px;
+	width: 320px;
+	float: right;
+	padding-top: 22px;
+}
+
+.contactshelp h2 {
+	text-align: left;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.contactshelp h2 a {
+	text-decoration: none;
+}
+
+.contactshelp h2 a:hover {
+    color: #ffe; /* Цвет текста активного пункта */
+    background-color: #FC9FBC; /* Цвет фона активного пункта */
+    border-radius: 25px;
+    border: 1px solid white;
+}
+
+.cart {
+	background-color: #FC9FBC;
+	width: 175px;
+	float: right;
+	height: 140px;
+	border-radius: 25px;
+	padding: 10px;	
+}
+
+.cart img {
+	width: 175px;
+	height: 110px;
+	border: 1px solid  #F7F2EE;
+	border-radius: 25px;
+	margin-bottom: 4px;
+}
+
+.cart p a {
+	text-decoration: none;
+}
+.cart p {
+	padding: 0 5px 0 25px;
+}
+
+.cart p a:hover {
+    color: #ffe; /* Цвет текста активного пункта */
+    background-color: #7DC12C; /* Цвет фона активного пункта */    
+    /*  #5488af */
+    border-radius: 25px;
+    border: 1px solid white;
+}
+
+.clear {
+	clear: both;
+}
+
+/* NAVIGATION */
+
+.nav {
+	height:55px;
+	margin-bottom: 15px;
+}
+
+.uppernav {
+	background-color: #FC9FBC;
+	height: 23px;
+	border-radius: 25px;
+	padding: 16px 10px 16px 10px;
+	/*width: 100%;*/
+}
+
+.uppernav li {
+	margin: 0 21px 0 21px;
+	display: inline-block;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.uppernav li a {
+	text-decoration: none;
+}
+
+.uppernav li a:hover {
+    color: #ffe; /* Цвет текста активного пункта */
+    background-color: #7DC12C; /* Цвет фона активного пункта */
+    /*  #5488af */
+    border-radius: 25px;
+    border: 1px solid white;
+    font-size: 20px;
+}
+
+/* CONTENT */
+
+/*menu*/
+
+.content {
+	height:900px;
+	margin-bottom: 15px;
+	/*background-color: lime;*/
+}
+
+.menu {
+	background-color: #FC9FBC;
+	width: 175px;
+	float: left;
+	height: 880px;
+	border-radius: 25px;
+	padding: 10px;	
+}
+
+.menu li a {
+	text-decoration: none;
+}
+
+.other {
+	background-color: #FC9FBC;
+	width: 175px;
+	float: right;
+	height: 880px;
+	border-radius: 25px;
+	padding: 10px;	
+}
+
+.main {
+	background-color: white;
+	/*background-color: #7DC12C;*/
+	border: 4px solid #7DC12C;
+	height: 872px;
+	margin: 0 210px 0 210px;
+	border-radius: 25px;
+	padding: 10px;	
+}
+
+/* FOOTER */
+
+.footer {
+	height:55px;
+}
+
+.upperfooter {
+	background-color: #FC9FBC;
+	height: 23px;
+	border-radius: 25px;
+	padding: 16px 10px 16px 10px;
+	/*width: 100%;*/
+}
+
+.upperfooter li {
+	margin: 0 65px 0 65px;
+	display: inline-block;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.upperfooter li a {
+	text-decoration: none;
+}
+
+.upperfooter li a:hover {
+    color: #ffe; /* Цвет текста активного пункта */
+    background-color: #7DC12C; /* Цвет фона активного пункта */
+    /*  #5488af */
+    border-radius: 25px;
+    border: 1px solid white;
+    font-size: 20px;
+}
